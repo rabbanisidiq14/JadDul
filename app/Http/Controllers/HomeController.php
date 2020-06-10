@@ -31,4 +31,9 @@ class HomeController extends Controller
 
         return view('home', $data);
     }
+
+    public function about()
+    {
+        return view('root');
+    }
 }
