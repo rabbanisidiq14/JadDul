@@ -7,9 +7,9 @@ use Illuminate\Support\Facades\DB;
 
 class GuruController extends Controller
 {
-    public function index($id_matpel)
+    public function index($id_guru)
     {
-    	$data['guru'] = DB::table('guru')->join('matpel','guru.id_matpel','=','matpel.id')->where('matpel.id',$id_matpel)->get();
+    	$data['guru'] = DB::table('matpel')->join('guru','matpel.id','=','guru.id_matpel')->where('guru.id',$id_guru)->get();
     	return view('pages.guru',$data);
     }
 }

@@ -29,28 +29,35 @@
     </svg> -->
 
 
+    <h1 class="display-3 text-center">Hari: {{ $hari_ini }}</h1>
+   
 
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-                <h1 class="display-3 text-center">Hari: {{ $hari->format('D') }}</h1>
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+    <div class="d-flex bd-highlight">
+      <div class="p-2 w-100 bd-highlight">
+           <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">
+                            Ruangan
                         </div>
-                    @endif
-                    <div class="list-group">
-                    @foreach($ruangan as $ruangans)
-                        <ul class="list-group">
-                          <a href="/ruangan/{{ $ruangans->id }}/hari/{{ $hari->format('D') }}" class="list-item"><li class="list-group-item disabled">{{ $ruangans->nama_ruangan }}</li></a>
-                        </ul>
-                    @endforeach
+                        <div class="card-body">
+                            @if (session('status'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ session('status') }}
+                                </div>
+                            @endif
+                            <div class="list-group">
+                            @foreach($ruangan as $ruangans)
+                                <ul class="list-group">
+                                  <a href="/ruangan/{{ $ruangans->id }}/hari/{{ $hari_ini }}" class="list-item"><li class="list-group-item disabled">{{ $ruangans->nama_ruangan }}</li></a>
+                                </ul>
+                            @endforeach
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+      </div>
     </div>
 </div>
 @endsection

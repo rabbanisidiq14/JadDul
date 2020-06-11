@@ -170,7 +170,7 @@ class InsertDefaultData extends Migration
 
         // Jadwal XI RPL 1
         DB::table('jadwal')->insert([
-            'hari' => 'Mon',
+            'hari' => 'Senin',
             'pel_begin' => '07.15',
             'pel_end' => '10.15',
             'id_ruangan' => 1,
@@ -179,7 +179,7 @@ class InsertDefaultData extends Migration
             'id_guru' => 3
         ]);
         DB::table('jadwal')->insert([
-            'hari' => 'Tue',
+            'hari' => 'Selasa',
             'pel_begin' => '07.15',
             'pel_end' => '10.15',
             'id_ruangan' => 1,
@@ -188,7 +188,7 @@ class InsertDefaultData extends Migration
             'id_guru' => 2
         ]);
         DB::table('jadwal')->insert([
-            'hari' => 'Wed',
+            'hari' => 'Rabu',
             'pel_begin' => '07.15',
             'pel_end' => '10.15',
             'id_ruangan' => 2,
@@ -197,7 +197,7 @@ class InsertDefaultData extends Migration
             'id_guru' => 1
         ]);
         DB::table('jadwal')->insert([
-            'hari' => 'Thu',
+            'hari' => 'Kamis',
             'pel_begin' => '07.15',
             'pel_end' => '10.15',
             'id_ruangan' => 5,
@@ -206,7 +206,7 @@ class InsertDefaultData extends Migration
             'id_guru' => 5
         ]);
         DB::table('jadwal')->insert([
-            'hari' => 'Fri',
+            'hari' => 'Jumat',
             'pel_begin' => '07.15',
             'pel_end' => '10.15',
             'id_ruangan' => 3,

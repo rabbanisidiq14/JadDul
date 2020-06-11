@@ -15,7 +15,7 @@ class AddColumnHari extends Migration
     {
         Schema::table('jadwal', function($table)
         {
-            $table->string('hari',3)->after('id');
+            $table->string('hari',10)->after('id');
         });
     }
 

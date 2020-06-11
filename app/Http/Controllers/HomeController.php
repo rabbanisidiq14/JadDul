@@ -27,7 +27,41 @@ class HomeController extends Controller
     {
         
         $data['ruangan'] = DB::table('ruangan')->get();
-        $data['hari'] = Carbon::now();
+        $hari = date ("D");
+ 
+        switch($hari){
+            case 'Sun':
+                $data['hari_ini'] = "Minggu";
+            break;
+     
+            case 'Mon':         
+                $data['hari_ini'] = "Senin";
+            break;
+     
+            case 'Tue':
+                $data['hari_ini'] = "Selasa";
+            break;
+     
+            case 'Wed':
+                $data['hari_ini'] = "Rabu";
+            break;
+     
+            case 'Thu':
+                $data['hari_ini'] = "Kamis";
+            break;
+     
+            case 'Fri':
+                $data['hari_ini'] = "Jumat";
+            break;
+     
+            case 'Sat':
+                $data['hari_ini'] = "Sabtu";
+            break;
+            
+            default:
+                $data['hari_ini'] = "Tidak di ketahui";     
+            break;
+        }
 
         return view('home', $data);
     }
